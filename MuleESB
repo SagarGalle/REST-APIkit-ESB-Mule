@@ -1,0 +1,67 @@
+Mule ESB
+
+It is a lightweight Java-based enterprise service bus (ESB) and integration platform that allows developers to connect applications together quickly and easily, enabling them to exchange data.
+It allows different applications to communicate with each other by acting as a transit system for carrying data between applications 
+
+ESB is an Architecture
+It is a set of rules and principals for integrating numerous applications together over a bus-like infrastructure.
+ESB allows users to integrate different applications by putting a communication bus between them and then enable each application to talk to the bus.
+  
+•	The ‘bus’ concept decouples applications from each other, this is usually achieved using a messaging server like JMS or AMQP.
+•	The data that travels on the bus in XML format.
+•	There is an ‘Adapter’ between the applications and the bus that transfers data between the two applications.
+•	The adapter is responsible for talking to the back end application and transforming data from the application format to the bus format. The adapter can also perform a host of other activities such as message routing transaction management, security, monitoring, error handling, etc.
+•	ESBs are generally stateless; the state is embedded in the messages passing through the bus.
+•	The ESB Adapter does data marshaling, transformation, security, transaction management and mediation.
+ESB Characteristics
+
+•	Canonical message format; typically XML, often standards-based.
+•	The message is the contract between systems.
+•	Each integrated system has an adapter to translate from the application format to the canonical format.
+•	Each system is decoupled by a ‘messaging bus’.
+•	ESB architecture is usually stateless; state is attached to the message.
+
+
+ESB Benefits
+
+•	Well-defined architecture, makes it fairly easy to design around and scope a project.
+•	Built for Scale; no state to manage, Adding new participants does not add load on a single point in the architecture.
+•	Easy to onboard new systems by introducing a new participant on the bus.
+•	Reliable; the bus decouples applications. A failure in one system does not impact other systems.
+•	Easier to migrate legacy systems. Backend applications are abstracted by the adapter, this means you can run new and legacy systems in tandem and route messages based on your migration needs.
+
+API Layer
+API Layer or Service Layer provides APIs to access data and/or functionality, implemented using REST or SOAP services, it provides decoupling of backend systems and applications from the clients that access them.
+
+ 
+
+
+API Layer Characteristics
+•	Need to make data in databases or file systems available to a wider audience.
+•	Reference / Lookup data – usually database, flat file or Excel spreadsheet.
+•	Modernize legacy applications by providing REST access to its data functionality.
+•	Provide a REST API in addition to an existing SOAP API to cater for a broader range of clients. 
+API Layer Benefits
+•	Decouple your clients from the data – promotes good service orientation
+•	Allows creation of REST APIs that can be consumed by mobile and other smart devices.
+•	Private data remain private since the API should only publish a subset of the information. The API controls exactly what data the API publishes.
+•	An API Layer can easily be integrated to existing access controls and LDAP/AD integration.
+
+
+We can break things down into three basic stages of application development and operation to help to find the resources we need:
+1.	Design and develop with Anypoint Studio which includes:
+o	Anypoint DataMapper - Drag-and-drop graphical design
+o	Anypoint Datasense - Automatically map fields between applications
+o	Anypoint Connectors - Integrate with anything, choosing from 120+ endpoints
+o	APIkit - Design RESTful APIs with a community tested open-source toolkit
+2.	Deploy your applications:
+o	For testing - Server embedded in Anypoint Studio for rapid debugging
+o	On-premises - Mule ESB standalone server for production deployments
+o	In a cluster - Mule Application Repository for highly available environments
+o	In the cloud - CloudHub, the world’s leading integration platform as a service (iPaaS)
+3.	Manage your deployments, integrations and applications with: 
+o	Mule Management Console - Reduce risk and optimize performance 
+o	CloudHub Insight - Track everything your data does in the cloud
+o	API Manager - Govern all of your service endpoints and APIs
+For additional details on the above, look here. 
+
