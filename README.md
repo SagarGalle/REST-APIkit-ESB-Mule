@@ -32,4 +32,4 @@ This API allows  to add, remove, and retrieve information about sports teams par
 
 7.Click through the other resources and methods to test out other API calls
 
-the base URI to  access the console for this API at http://localhost:8080/api/consol
+the base URI to  access the console for this API at http://localhost:8080/api/console
